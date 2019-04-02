@@ -88,3 +88,13 @@ e.g. connect to server2
 ```
 zk_server1/bin/zkCli.sh -server 127.0.0.1:2182   
 ```
+
+6. Java connect to zookeeper server
+
+127.0.0.1 should be replaced with the actual server IP
+
+```java
+private void createZKInstance() throws IOException {
+    zk = new ZooKeeper("127.0.0.1:2181,127.0.0.1:2182,127.0.0.1:2183", Test.SESSION_TIMEOUT, this.wh);
+}
+```
