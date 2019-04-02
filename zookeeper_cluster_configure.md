@@ -74,10 +74,17 @@ server.3=127.0.0.1:2890:3890
 ```
 
 4. Start servers   
+
+```
 zk_server1/bin/zkServer.sh start   
 zk_server2/bin/zkServer.sh start   
 zk_server3/bin/zkServer.sh start   
+```
 
 5. Connect to server   
+
 e.g. connect to server2   
+
+```
 zk_server1/bin/zkCli.sh -server 127.0.0.1:2182   
+```
