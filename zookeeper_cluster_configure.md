@@ -93,7 +93,15 @@ zk_server1/bin/zkCli.sh -server 127.0.0.1:2182
 
 127.0.0.1 should be replaced with the actual server IP
 
+```gradle
+// https://mvnrepository.com/artifact/org.apache.zookeeper/zookeeper
+compile group: 'org.apache.zookeeper', name: 'zookeeper', version: '3.4.13', ext: 'pom'
+```
+
 ```java
+import org.apache.zookeeper.ZooKeeper;
+
+private ZooKeeper zk;
 private void createZKInstance() throws IOException {
     zk = new ZooKeeper("127.0.0.1:2181,127.0.0.1:2182,127.0.0.1:2183", Test.SESSION_TIMEOUT, this.wh);
 }
